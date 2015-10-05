@@ -2,13 +2,12 @@ from __future__ import unicode_literals
 
 import threading
 import time
-
+from django import apps
 from django.conf import settings
 from django.db.models.signals import pre_save
 from django.utils.functional import curry
-from django.db.models.loading import get_model
 from auditlog.models import LogEntry
-
+get_model = apps.get_model
 
 threadlocal = threading.local()
 
