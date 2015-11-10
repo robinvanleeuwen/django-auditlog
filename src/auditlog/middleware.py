@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 import threading
 import time
-from django import apps
+from django.apps import apps
 from django.conf import settings
 from django.db.models.signals import pre_save
 from django.utils.functional import curry
